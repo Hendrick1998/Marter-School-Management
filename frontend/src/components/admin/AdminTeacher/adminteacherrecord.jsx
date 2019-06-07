@@ -72,7 +72,12 @@ class AdminTeacherRecord extends Component{
                 Header: "Profile",
                 Cell: props => {
                     return (
-                        <button class='btn btn-primary'>See Profile</button>
+                        <Link to={{
+                            pathname : '/adminteacherprofile',
+                            state: props.original
+                        }}>
+                            <button class='btn btn-primary'>See Profile</button>
+                        </Link>
                     )
                 },
                 style: {

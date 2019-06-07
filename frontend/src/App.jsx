@@ -11,6 +11,7 @@ import StudentRecord from './components/admin/adminStudent/adminstudentrecord';
 import StudentProfile from './components/admin/adminStudent/adminstudentprofile';
 import AdminAddStudent from './components/admin/adminStudent/adminaddstudent';
 import AdminTeacherRecord from './components/admin/AdminTeacher/adminteacherrecord';
+import AdminTeacherProfile from './components/admin/AdminTeacher/AdminTeacherProfile';
 import AdminAddTeacher from './components/admin/AdminTeacher/adminaddteacher';
 import AdminAddSubject from './components/admin/AdminSubject/adminaddsubject';
 import AdminExam from './components/admin/AdminExam/adminexam';
@@ -40,6 +41,7 @@ function App() {
           <Route exact path='/adminaddstudent' component={AdminAddStudent}/>
           <Route exact path='/adminteacherrecord' component={AdminTeacherRecord}/>
           <Route exact path='/adminaddteacher' component={AdminAddTeacher}/>
+          <Route exact path='/adminteacherprofile' component={AdminTeacherProfile}/>
           <Route exact path='/adminaddsubject' component={AdminAddSubject}/>
           <Route exact path='/adminexam' component={AdminExam}/>
           <Route exact path='/admindriver' component={AdminDriver}/>
