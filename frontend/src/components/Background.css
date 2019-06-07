@@ -1,0 +1,9 @@
+
+.jumbotron{
+	background-image: url('../images/foto.png');
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    padding-top: 240px;
+    padding-bottom: 280px;
+} 

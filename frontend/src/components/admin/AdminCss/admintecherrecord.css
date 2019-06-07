@@ -1,0 +1,22 @@
+.text{
+    color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-left:1rem;
+}
+.reacttable{
+    margin:1rem;
+}
+
+.addbutton{
+    margin-top:0.5rem;
+}
+
+.datepicker{
+    /* background-image: url('../photo/calendar.png'); */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    padding-right:10px;
+  
+  }

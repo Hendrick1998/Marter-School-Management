@@ -1,0 +1,16 @@
+{
+  "name": "msmfullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "(cd frontend && npm install) && (cd backend && npm install)",
+    "start": "concurrently \"cd frontend && npm start\" \"cd backend && nodemon start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

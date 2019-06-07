@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:400,800,700,600,300);
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+nav {
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #233550;
+  color: #fff;
+  float: left;
+  overflow: hidden;
+  transition: width .3s ease-in-out;
+  box-shadow: 0 0 1px #233550;
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  z-index: 100;
+}
+
+.sidebar:hover {
+  width: 260px;
+  overflow-y: auto;
+}
+
+.canvas-toggle {
+  position: fixed;
+  z-index: 1199;
+}
+
+
+
+.sidebar:hover .main-nav ul li a {
+  opacity: 1;
+  left: 0;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+}
+
+.sidebar .main-nav ul li {
+  min-height: 50px;
+  line-height: 50px;
+  position: relative;
+  border-left: 3px solid #233550;
+}
+
+.sidebar .main-nav ul li.logo {
+  margin-bottom: 10px;
+}
+
+.sidebar .main-nav ul li.logo a {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.sidebar .main-nav ul li.logo i:before {
+  color: white;
+  font-size: 1.2em;
+}
+
+.sidebar .main-nav ul li a {
+  display: block;
+  padding-left: 58px;
+  position: relative;
+  left: 15px;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.sidebar .main-nav ul li i {
+  font-weight: 900;
+  position: absolute;
+  font-size: 1.2em;
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  left: 0;
+  text-align: center;
+}
+
+.sidebar .main-nav ul li i:before {
+  font-size: 1em;
+  transition: all .3s ease-in-out;
+}
+
+.sidebar .main-nav ul li:hover {
+  background-color: #1B293E;
+  border-left: 3px solid #007bff;
+}
+
+.sidebar .main-nav li a:focus {
+  border-left: 3px solid #007bff;
+}
+
+.sidebar .main-nav ul li:hover i:before {
+  color: #007bff;
+}
+
+.sidebar:hover + .menu {
+  transition: all 0.5s ease;
+  position: relative;
+  float: left;
+}
+
+nav:hover ~ .menu {
+  transition: all 0.5s ease;
+  position: relative;
+  left: 10%;
+  width: 90%;
+}
+
+.menu {
+  position: relative;
+  left: 3%;
+  width: 97%;
+}
+
+.container{
+  margin-top: 2rem;
+}

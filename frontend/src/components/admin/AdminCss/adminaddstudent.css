@@ -1,0 +1,23 @@
+.cardpersonal {
+
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  
+  
+  .datepicker {
+    /* background-image: url('../photo/calendar.png'); */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    padding-right: 10px;
+  
+  }
+  
+  #profile-img {
+    margin-top: 1rem;
+  }
+  
+  .cardsize {
+    width: 200px;
+  }

@@ -1,0 +1,44 @@
+/* .studentrecord{
+ 
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-style: bold;
+  } */
+  
+  .textcontainer{
+      margin-left: 2rem;
+      margin-top: 3rem;
+  }
+  
+  .dropdown{
+      border-color: black;
+  }
+  .dropdowngrade{
+    padding-left: 2rem;
+  }
+  
+  .container-search{
+      margin-top:2rem;
+  }
+  
+  .btn-search{
+      height:40px;
+      margin-left:20px;
+      margin-bottom:10px;
+      vertical-align: middle;
+      text-align:center;
+      font-size: 20px;
+      line-height: 10px;
+      display: table-cell;
+  }
+  
+  .input{   
+      height:40px;
+  }
+  
+  .reacttable{
+      margin:1rem;
+  }
+  
+  
