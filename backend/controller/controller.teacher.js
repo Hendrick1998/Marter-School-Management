@@ -1,11 +1,14 @@
 const db = require('../config/database');
+const fs = require('fs');
+const path = require('../config/path');
 
 const sequelize = db.sequelize;
 const Teacher = db.tbl_teacher;
+const User = db.tbl_user;
 
 exports.getAllTeacher = (req,res)=>{
 
-    const sql = 'SELECT tbl_teachers.teacher_name,tbl_teachers.teacher_address,tbl_teachers.teacher_phone,\
+    const sql = 'SELECT tbl_teachers.teacher_id,tbl_teachers.teacher_name,tbl_teachers.teacher_address,tbl_teachers.teacher_phone,\
                  tbl_teachers.teacher_date_of_birth,tbl_teachers.teacher_imageURL,tbl_subjects.subject_name,\
                  tbl_teachers.teacher_created_by,tbl_teachers.teacher_updated_by,tbl_teachers.createdAt,tbl_teachers.updatedAt\
                  FROM TBL_TEACHERS,tbl_subjects\
@@ -64,9 +67,10 @@ exports.addTeacher = (req,res)=>{
 }
 
 exports.updateTeacher = (req,res)=>{
+    console.log(req.body);
     Teacher.update({
         teacher_name : req.body.teacher_name,
-        teacher_subject_id : req.body.teacher_subject_id,
+        teacher_subject_id : req.body.subject_name,
         teacher_address : req.body.teacher_address,
         teacher_phone : req.body.teacher_phone,
         teacher_date_of_birth : req.body.teacher_date_of_birth,
@@ -79,8 +83,26 @@ exports.updateTeacher = (req,res)=>{
     }
     )
     .then(()=>{
-        res.send('Update Data successfully');
+        // res.send('Update Data successfully');
         console.log('Update Data successfully');
+        User.update({
+            user_name : req.body.teacher_name,
+            user_phone : req.body.teacher_phone,
+            user_pass : req.body.user_pass,
+            user_ur_id : req.body.user_ur_id,
+            user_created_by : req.body.user_created_by,
+            user_updated_by : req.body.user_updated_by
+        },{
+            where : {user_id : req.body.teacher_id}
+        })
+        .then(()=>{
+            res.send('Data updated successfully');
+            console.log('Data updated successfully');
+        })
+        .catch((err)=>{
+            res.send('Error in data updating : '+err);
+            console.log('Error in data updating : '+err);
+        });
     })
     .catch((err)=>{
         res.send('Error in updating data : '+err);
@@ -99,5 +121,18 @@ exports.deleteTeacher = (req,res)=>{
     .catch((err)=>{
         res.send('Error in deleting data : '+err);
         console.log('Error in deleting data : '+err);
+    });
+}
+
+exports.getTeacherImage = (req,res)=>{
+    const pic = req.params.imageName;
+    console.log(pic);
+    fs.readFile(path.path+pic,(err,content)=>{
+        if(err){
+            res.send('No Such Image');
+        }else{
+            //res.writeHead(200,{'Content-Type':'multipart/form-data'})
+            res.send(content);
+        }
     });
 }

@@ -13,4 +13,6 @@ module.exports = (app)=>{
 
     app.delete('/teachers/deleteTeacher',teacher.deleteTeacher);
 
+    app.get('/teachers/getTeacherImage/:imageName',teacher.getTeacherImage);
+
 }
