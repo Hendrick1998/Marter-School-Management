@@ -89,14 +89,14 @@ export default class AdminDash extends Component {
                                 </Card>
                             </Col>
                             <Col xl={4} lg={4} > 
-                            <Container style={{height:'400px',padding:'5rem'}} >
-                            <Calender /> 
+                            <Container style={{ marginBottom: '1rem'}}>
+                            <MyEvent/> 
                             </Container>                        
                             </Col>
                         </Row>
                         <Row>
                            <Col xl={4} lg={4}>
-                           <Card style={{ height: '300px', marginBottom: '1rem'}}>
+                           <Card style={{ height: '380px', marginBottom: '1rem'}}>
                             <Chart/>
                            </Card>
                            </Col>
@@ -106,11 +106,9 @@ export default class AdminDash extends Component {
                            </Card>
                            </Col>   
                            <Col xl={4} lg={4}>
-                           <Container style={{ height: '100%', marginBottom: '1rem'}}>
-                           <header class="box">
-			<label for="acc-close" class="box-title text-center">Notifications</label>
-		</header>
-                               <MyEvent/>
+                           <Container style={{padding:'5rem'}} >
+                           
+                               <Calender/>
                            </Container>
                            </Col>               
                        </Row>

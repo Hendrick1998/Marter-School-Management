@@ -5,7 +5,9 @@ class MyEvent extends React.Component {
     render() {
         return (
             <div>
-                
+                <header class="box" style={{zIndex: '-999'}}>
+			<label for="acc-close" class="box-title text-center">Notifications</label>
+		      </header>
             <nav class="accordion arrows">
                 <input type="radio" name="accordion" id="cb1" />
                 <section class="box">

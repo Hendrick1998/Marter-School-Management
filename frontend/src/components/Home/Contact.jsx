@@ -4,7 +4,7 @@ export default class ContactUs extends Component{
     render(){
         return(
             <div>
-                <Navbar/>
+                <Navbar activeElement = "contact-us"/>
                 <h1 className="cover-heading">Contact Us</h1>
             </div>
         )

@@ -1,9 +1,17 @@
 
-.jumbotron{
-	background-image: url('../images/foto.png');
+.home-page-body {
+    background-image: url('../images/foto.png');
     background-size: cover;
-    height: 100%;
     background-repeat: no-repeat;
-    padding-top: 240px;
-    padding-bottom: 280px;
-} 
+    color: #fff;
+    text-align: center;
+    /* padding-top: 240px;
+    padding-bottom: 240px; */
+    margin-top: -4px;
+}
+
+.home-page-info p {
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+}

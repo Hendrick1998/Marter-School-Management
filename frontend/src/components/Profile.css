@@ -1,0 +1,44 @@
+.card-body .card-title {
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.profile-card {
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: transform .4s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.profile-card:hover a {
+    text-decoration: none;
+}
+
+.profile-card .profile-card-image img {
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2rem;
+}
+
+.profile-card-body {
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}

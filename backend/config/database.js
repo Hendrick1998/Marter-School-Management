@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 // Connect to the database
-const sequelize = new Sequelize('msm_db','root','password',{
+const sequelize = new Sequelize('msm_db','msm','password',{
     host : 'localhost',
     dialect : 'mysql',
     pool : {

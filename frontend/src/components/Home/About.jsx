@@ -4,7 +4,7 @@ export default class About extends Component{
     render(){
         return(
             <div>
-             <Navbar/>
+             <Navbar activeElement = "about"/>
                 <h1 className="cover-heading">About</h1>
                 
             </div>

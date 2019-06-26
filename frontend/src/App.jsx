@@ -25,6 +25,7 @@ import AdminChildClass from './components/admin/AdminClass/AdminClassChild';
 import AdminParentProfile from './components/admin/AdminParents/AdminParentProfile';
 import AdminParentChild from './components/admin/AdminParents/AdminParentsChild';
 import Student from './components/Student/Student';
+
 function App() {
   return (
     <div className="App">

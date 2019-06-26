@@ -150,20 +150,20 @@ class AdminAddStudent extends Component {
                       <div className='row'>
                         <div className='col-xl-6 col-lg-6'>
                           <div className='form-group'>
-                            <label>Username</label>
+                            <label>Name</label>
                             <input 
                               type='text'
                               name='username'
                               onChange={this.handleOnChange.bind(this)}
                               className='form-control'
-                              required></input>
+                              required placeholder="Mg Myo Myint Win Sone"></input>
                           </div>
                         </div>
                         <div className='col-xl-6 col-lg-6'>
                           <div className='form-group'>
                             <label>Password</label>
                             <input 
-                              type='text'
+                              type='password'
                               name='password'
                               onChange={this.handleOnChange.bind(this)}
                               className='form-control'
@@ -176,27 +176,57 @@ class AdminAddStudent extends Component {
                     <div className='container' >
                       <div className='row'>
                         <div className='col-xl-6 col-lg-6'>
-                          <div className='form-group'>
-                            <label>Roll NO</label>
+                        <div className='form-group'>
+                            <label>NRC Number</label>
                             <input 
                               type='text'
-                              name='rollno'
+                              name='year'
                               onChange={this.handleOnChange.bind(this)}
                               className='form-control'
-                              required></input>
+                              required placeholder="9/KMN(Naing) 071774"></input>
                           </div>
+                          
                         </div>
                         <div className='col-xl-6 col-lg-6'>
                           <div className='form-group'>
+                              <label>Email</label>
+                              <input 
+                                type='text'
+                                name='rollno'
+                                onChange={this.handleOnChange.bind(this)}
+                                className='form-control'
+                                required placeholder = "e.g. JohnDoe@gmail.com"></input>
+                            </div>
+                          </div>
+
+                      </div>
+                    </div>
+
+                    <div className='container' >
+                      <div className='row'>
+                        <div className='col-xl-6 col-lg-6'>
+                        <div className='form-group'>
                             <label>Year</label>
                             <input 
                               type='text'
                               name='year'
                               onChange={this.handleOnChange.bind(this)}
                               className='form-control'
-                              required></input>
+                              required placeholder = "Grade-10"></input>
                           </div>
+                          
                         </div>
+                        <div className='col-xl-6 col-lg-6'>
+                          <div className='form-group'>
+                              <label>Roll Number</label>
+                              <input 
+                                type='text'
+                                name='rollno'
+                                onChange={this.handleOnChange.bind(this)}
+                                className='form-control'
+                                required placeholder = "32"></input>
+                            </div>
+                          </div>
 
                       </div>
                     </div>
@@ -227,7 +257,7 @@ class AdminAddStudent extends Component {
                               name='dateofbirth'
                               onChange={this.handleOnChange.bind(this)}
                               className='form-control datepicker'
-                              required></input>
+                              required placeholder = "MM/DD/YY"></input>
                           </div>
                         </div>
                         <div className='col-xl-4 col-lg-4'>
@@ -238,7 +268,7 @@ class AdminAddStudent extends Component {
                               name='phone' 
                               onChange={this.handleOnChange.bind(this)}
                               className='form-control'
-                              required></input>
+                              required placeholder = "09-XXXXXXXXX"></input>
                           </div>
                         </div>
                         <div className='col-xl-4 col-lg-4'>
@@ -249,7 +279,7 @@ class AdminAddStudent extends Component {
                               name='address'
                               onChange={this.handleOnChange.bind(this)} 
                               className='form-control'
-                              required></input>
+                              required placeholder = "73 St, Mandalay"></input>
                           </div>
                         </div>
 
@@ -265,37 +295,16 @@ class AdminAddStudent extends Component {
                               name='parent' 
                               onChange={this.handleOnChange.bind(this)}
                               className='form-control'
-                              required></input>
+                              required placeholder = "U Ba Htun"></input>
                           </div>
                         </div>
-                        <div className='col-xl-4 col-lg-4'>
-                          <div className='form-group'>
-                            <label>Role</label>
-                            <select 
-                              type='text'
-                              name='role' 
-                              onChange={this.handleOnChange.bind(this)}
-                              className='form-control'
-                              required>
-                                {
-                                  this.state.userRoleData.map((item,index)=>{
-                                    return <option key={index}>
-                                      {
-                                        item.ur_role
-                                      }
-                                    </option>
-                                  })
-                                }
-                              </select>
-                          </div>
-                        </div>
+                      
                         <div className='col-xl-4 col-lg-4'>
 
                           <label htmlFor="speed">Transport</label>
                           <select name="transport" id="transport">
                             <option>No</option>
                             <option>Yes</option>
-                            <option disabled defaultValue>None</option>
                           </select>
 
                         </div>
